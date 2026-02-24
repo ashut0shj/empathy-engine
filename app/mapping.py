@@ -78,6 +78,3 @@ def get_voice_params(emotion: str, confidence: float = 1.0, config_path: str = N
 
     return blended
 
-
-if __name__ == "__main__":
-

@@ -5,7 +5,7 @@ import json
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.emotion_detector import detect_emotion
-from app.mapping import get_voice_params, describe_params
+from app.mapping import get_voice_params
 from app.tts_engine import generate_speech
 
 HTML_PAGE = """<!DOCTYPE html>

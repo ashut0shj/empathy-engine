@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────
+# .dockerignore
+# Files and folders excluded from the Docker build context.
+# Keeping this tight speeds up builds and avoids leaking secrets.
+# ─────────────────────────────────────────────────────────────
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments (install happens inside container via requirements.txt)
+venv/
+.venv/
+env/
+ENV/
+
+# Generated audio output (mounted as volume at runtime)
+output/
+
+# Git and version control
+.git/
+.gitignore
+.gitattributes
+
+# Editor / IDE config
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Secrets / env files (never bake these into the image)
+.env
+.env.*
+secrets.txt
+
+# Documentation (not needed inside the container)
+# README.md  <-- kept so it's visible via docker exec if needed
