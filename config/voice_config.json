@@ -1,0 +1,27 @@
+{
+  "_comment": "Custom voice parameter config for the Empathy Engine. Edit these values to tune the voice behavior.",
+
+  "positive": {
+    "_description": "Happy, excited, joyful speech — faster, louder, higher pitch",
+    "rate": 210,
+    "volume": 1.0,
+    "pitch": 2,
+    "pause_factor": 0.8
+  },
+
+  "negative": {
+    "_description": "Sad, upset, worried speech — slower, softer, lower pitch",
+    "rate": 135,
+    "volume": 0.75,
+    "pitch": -3,
+    "pause_factor": 1.4
+  },
+
+  "neutral": {
+    "_description": "Default calm, informational speech",
+    "rate": 175,
+    "volume": 0.9,
+    "pitch": 0,
+    "pause_factor": 1.0
+  }
+}
