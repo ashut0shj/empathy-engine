@@ -1,10 +1,5 @@
 """
-emotion_detector.py
--------------------
 Detects the emotional tone of input text.
-
-Primary method: VADER (fast, offline, no model download required)
-Fallback method: TextBlob (simple polarity-based detection)
 
 Returns a dict with:
   - emotion: "positive", "negative", or "neutral"
@@ -44,9 +39,9 @@ def detect_emotion_vader(text: str) -> dict:
             "method": "VADER"
         }
     except ImportError:
-        return None  # Signal to try fallback
+        return None 
 
-
+like only one return per fucntion , use if as gaurds , and use a varibale to store data to return in the end 
 def detect_emotion_textblob(text: str) -> dict:
     """
     Fallback: Use TextBlob polarity score to detect emotion.
@@ -97,17 +92,14 @@ def detect_emotion(text: str) -> dict:
             "method": "default"
         }
 
-    # Try VADER first
     result = detect_emotion_vader(text)
     if result:
         return result
 
-    # Try TextBlob as fallback
     result = detect_emotion_textblob(text)
     if result:
         return result
 
-    # Last resort — return neutral
     print("Warning: No emotion library found. Defaulting to neutral.\n  Install with: pip install vaderSentiment textblob")
     
     return {

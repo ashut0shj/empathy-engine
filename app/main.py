@@ -30,8 +30,7 @@ from app.tts_engine import generate_speech
 
 def print_banner():
     print("\n" + "=" * 55)
-    print("  🎙️  The Empathy Engine - Emotional TTS System")
-    print("=" * 55)
+    print("The Empathy Engine")
 
 
 def run_pipeline(text: str, output_dir: str = "output", config_path: str = None, verbose: bool = True) -> dict:
