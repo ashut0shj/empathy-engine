@@ -60,7 +60,7 @@ docker compose version
 ### Build and start the web interface
 
 ```bash
-git clone <your-repo-url> empathy-engine
+git clone https://github.com/ashut0shj/empathy-engine.git
 cd empathy-engine
 
 docker compose up --build
